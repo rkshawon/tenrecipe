@@ -36,15 +36,11 @@ function Query() {
     }
     const inputV = e=>{
         setSearch(e.target.value)
-        console.log(e.target.value)
     }
     const submitV = ()=>{
         setLoader(true)
         setQuery(search)
         setSearch('')   
-    }
-    const loading = ()=>{
-        console.log(load)  
     }
     return (
         (!load)?(
@@ -62,7 +58,7 @@ function Query() {
                 </div>)
                 :(<div><h3>Try different keywords</h3></div>)}
         </div>)
-        :(<div className = "loader">Loading.{loading()}</div>)
+        :(<div className = "loader">Loading.</div>)
     )
 }
 
