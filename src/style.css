@@ -34,6 +34,7 @@ button{
     border: none;
     margin-top: 5px;
     box-shadow: 1px 1px 3px rgb(165, 163, 163);
+    font-weight: bold;
 
 }
 button:hover{
@@ -62,3 +63,46 @@ h4, h3{
 img{
     box-shadow: 0px 1px 10px black;
 }
+.loader{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 100%;
+}
+.loader:after {
+    content: '..';
+    animation: dots 1s steps(5, end) infinite;}
+  
+  @keyframes dots {
+    0%, 20% {
+      color: rgba(0,0,0,0);
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    40% {
+      color: white;
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    60% {
+      text-shadow:
+        .25em 0 0 white,
+        .5em 0 0 rgba(0,0,0,0);}
+    80%, 100% {
+      text-shadow:
+        .25em 0 0 white,
+        .5em 0 0 white;}
+}
+
+@media screen and (max-width: 600px) {
+    body, .container, .search, .main{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .info{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+  }

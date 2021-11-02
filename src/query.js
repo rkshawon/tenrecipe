@@ -6,10 +6,12 @@ const apiCall = {
     url: "https://api.edamam.com/",
     id: "9bfd8464"
 }
-function Youtube() {
+function Query() {
     const [data, setData] = useState([])
+    const[valited, setValitation] = useState([])
     const [search, setSearch] = useState('')
-    const [query, setQuery] = useState("")
+    const [query, setQuery] = useState("apple")
+    const [load, setLoader] = useState(true)
 
     useEffect(()=>{
         api()
@@ -20,11 +22,14 @@ function Youtube() {
         .then(res=>res.json())
         .then(data=>{
             setData(data.hits)
+            setValitation(data)
+            setLoader(false)
             console.log(data)
         })
     }
     const searchItem = (e)=>{
         if(e.key === "Enter"){
+            setLoader(true)
             setQuery(search)
             setSearch('')
         }
@@ -34,22 +39,31 @@ function Youtube() {
         console.log(e.target.value)
     }
     const submitV = ()=>{
+        setLoader(true)
         setQuery(search)
-        setSearch('')
+        setSearch('')   
+    }
+    const loading = ()=>{
+        console.log(load)  
     }
     return (
+        (!load)?(
         <div className = "container">
                 <div className = "search">
-                    <input type = "text" value = {search} onChange = {inputV} onKeyPress = {searchItem}/>
+                    <input type = "text" value = {search} onChange = {inputV} onKeyPress = {searchItem} placeholder ="Search here..."/>
                     <button onClick = {submitV}>Search</button>
                 </div>
-                <div className = "result">
+                {(valited.more)?
+                (<div className = "result">
+                {console.log("load", load)}
                     {data.map(recipe=>(
                         <View key={recipe.recipe.label} title = {recipe.recipe.label} calories = {recipe.recipe.calories} image = {recipe.recipe.image} mealtype = {recipe.recipe.mealType[0]} description = {recipe.recipe.ingredients} dishType = {recipe.recipe.dishType} dietLabels = {recipe.recipe.dietLabels}/>
                     ))}
-                </div>
-        </div>
+                </div>)
+                :(<div><h3>Try different keywords</h3></div>)}
+        </div>)
+        :(<div className = "loader">Loading.{loading()}</div>)
     )
 }
 
-export default Youtube
+export default Query

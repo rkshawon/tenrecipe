@@ -1,10 +1,10 @@
 import './App.css';
-import Youtube from './youtube';
+import Query from './query';
 
 function App() {
   return (
     <div>
-      <Youtube/> 
+      <Query/> 
     </div>
   );
 }
