@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/tenrecipe/static/css/main.47cb9e73.chunk.css",
-    "main.js": "/tenrecipe/static/js/main.c9bbf090.chunk.js",
-    "main.js.map": "/tenrecipe/static/js/main.c9bbf090.chunk.js.map",
+    "main.css": "/tenrecipe/static/css/main.f4971800.chunk.css",
+    "main.js": "/tenrecipe/static/js/main.1b26f2a2.chunk.js",
+    "main.js.map": "/tenrecipe/static/js/main.1b26f2a2.chunk.js.map",
     "runtime-main.js": "/tenrecipe/static/js/runtime-main.84e2f05a.js",
     "runtime-main.js.map": "/tenrecipe/static/js/runtime-main.84e2f05a.js.map",
     "static/js/2.6a3df836.chunk.js": "/tenrecipe/static/js/2.6a3df836.chunk.js",
     "static/js/2.6a3df836.chunk.js.map": "/tenrecipe/static/js/2.6a3df836.chunk.js.map",
     "index.html": "/tenrecipe/index.html",
-    "static/css/main.47cb9e73.chunk.css.map": "/tenrecipe/static/css/main.47cb9e73.chunk.css.map",
+    "static/css/main.f4971800.chunk.css.map": "/tenrecipe/static/css/main.f4971800.chunk.css.map",
     "static/js/2.6a3df836.chunk.js.LICENSE.txt": "/tenrecipe/static/js/2.6a3df836.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.84e2f05a.js",
     "static/js/2.6a3df836.chunk.js",
-    "static/css/main.47cb9e73.chunk.css",
-    "static/js/main.c9bbf090.chunk.js"
+    "static/css/main.f4971800.chunk.css",
+    "static/js/main.1b26f2a2.chunk.js"
   ]
 }
